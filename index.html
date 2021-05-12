@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+
+    <style>
+        #L1, #L3 {
+            font-family: sans-serif;
+            padding: 10px;
+            font-size: 20px;
+        }
+        #L2{
+            font-family: sans-serif;
+            padding: 10px;
+        }
+        
+        #output{
+            font-family: sans-serif;
+            padding-left: 10px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Calculadora</h1>
+<div id="L1">
+    <button onclick="somar()">+</button>
+    <button onclick="subtrair()">-</button>
+    <button onclick="multiplicar()">*</button>
+    <button onclick="dividir()">/</button>
+</div>
+
+<div id="L2">
+    <button onclick="elevar()">Elevar</button>
+    <button onclick="raiz()">Raiz</button>
+    <button onclick="cos()">Cosceno</button>
+    <button onclick="sen()">Seno</button>
+</div>
+
+<div id="L3">
+    <button onclick="limpar()">limpar</button>
+</div>
+        
+    <div id="output"></div>
+    
+    <script>
+        var output = document.querySelector('#output');
+        
+            
+        function limpar(){
+            var msg = '';
+            output.innerHTML = msg;
+        }            
+            
+            
+        function somar(){
+            var n1 = prompt('Para somar digite um número: ');
+            n1 = parseFloat(n1);
+            var n2 = prompt('Para somar digite outro valor:');
+            n2 = parseFloat(n2);
+            n1 = n1 + n2;
+            output.innerHTML = n1;
+        }
+            
+        function subtrair(){
+            var n1 = prompt('Para subtrair digite um número: ');
+            n1 = parseFloat(n1);
+            var n2 = prompt('Para subtrair digite outro valor:');
+            n2 = parseFloat(n2);
+            n1 = n1 - n2;
+            output.innerHTML = n1;
+        }
+            
+        function multiplicar(){
+            var n1 = prompt('Para multiplicar digite um número: ');
+            n1 = parseFloat(n1);
+            var n2 = prompt('Para multiplicar digite outro valor:');
+            n2 = parseFloat(n2);
+            n1 = n1 * n2;
+            output.innerHTML = n1;
+        }
+            
+        function dividir(){
+            var n1 = prompt('Para dividir digite um número: ');
+            n1 = parseFloat(n1);
+            var n2 = prompt('Para dividir digite outro valor:');
+            n2 = parseFloat(n2);
+            n1 = n1 / n2;
+            output.innerHTML = n1;
+        }
+
+        function elevar(){
+            var n1 = prompt('Para dividir digite um número: ');
+            n1 = parseFloat(n1);
+            var n2 = prompt('Para dividir digite outro valor:');
+            n2 = parseFloat(n2);
+            n1 = Math.pow(n1, n2);
+            output.innerHTML = n1;
+        }
+
+        function raiz(){
+            var n1 = prompt('Para dividir digite um número: ');
+            n1 = parseFloat(n1);
+            n1 = Math.sqrt(n1);
+            output.innerHTML = n1;
+        }
+
+        function cos(){
+            var n1 = prompt('Para dividir digite um número: ');
+            n1 = parseFloat(n1);
+            n1 = Math.cos(n1);
+            output.innerHTML = n1;
+        }
+
+        function sen(){
+            var n1 = prompt('Para dividir digite um número: ');
+            n1 = parseFloat(n1);
+            n1 = Math.sin(n1);
+            output.innerHTML = n1;
+        }
+                            
+    </script>
+    
+</body>
+</html>
